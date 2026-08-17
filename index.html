@@ -1,13 +1,4 @@
-from pathlib import Path
-import zipfile
 
-base = Path("/mnt/data/dame_k_website")
-base.mkdir(exist_ok=True)
-
-# Copy the uploaded logo into the website folder.
-logo_src = Path("/mnt/data/1000000306.jpg")
-logo_dst = base / "dame-k-logo.jpg"
-logo_dst.write_bytes(logo_src.read_bytes())
 
 html = r"""<!DOCTYPE html>
 <html lang="en">
