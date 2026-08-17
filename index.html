@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+from pathlib import Path
+import zipfile
+
+base = Path("/mnt/data/dame_k_website")
+base.mkdir(exist_ok=True)
+
+# Copy the uploaded logo into the website folder.
+logo_src = Path("/mnt/data/1000000306.jpg")
+logo_dst = base / "dame-k-logo.jpg"
+logo_dst.write_bytes(logo_src.read_bytes())
+
+html = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -222,3 +233,13 @@
 
 </body>
 </html>
+"""
+
+(base / "index.html").write_text(html, encoding="utf-8")
+
+zip_path = Path("/mnt/data/DAME_K_website.zip")
+with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+    z.write(base / "index.html", "index.html")
+    z.write(base / "dame-k-logo.jpg", "dame-k-logo.jpg")
+
+print(f"Created: {zip_path}")
