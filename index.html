@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAME K — Révélez Votre Élégance</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.5;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand {
+      font-size: 26px;
+      letter-spacing: 5px;
+      font-weight: 500;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 28px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .hero {
+      min-height: 78vh;
+      background: #050505;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 55px 20px;
+    }
+    .hero img {
+      width: min(430px, 82vw);
+      border-radius: 4px;
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 82px);
+      letter-spacing: 10px;
+      font-weight: 400;
+    }
+    .hero p {
+      margin: 15px 0 30px;
+      font-family: Arial, sans-serif;
+      letter-spacing: 3px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      transition: .2s;
+    }
+    .button:hover { background: #ddd; }
+    section { padding: 80px 7%; }
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      margin-bottom: 45px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .dress {
+      height: 390px;
+      background: #f1f1f1;
+      display: grid;
+      place-items: center;
+      font-size: 70px;
+    }
+    .dress.black { background: #111; color: #fff; }
+    .dress.white { background: #eee; color: #111; }
+    .card-info {
+      padding: 22px;
+      text-align: center;
+    }
+    .card-info h3 {
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    .price {
+      font-family: Arial, sans-serif;
+      margin: 8px 0 16px;
+      font-size: 14px;
+    }
+    .about {
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    .about p {
+      max-width: 680px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      color: #ddd;
+      font-size: 15px;
+    }
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 760px) {
+      header { flex-direction: column; gap: 12px; }
+      nav a { margin: 0 8px; font-size: 11px; }
+      .products { grid-template-columns: 1fr; }
+      .dress { height: 330px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">DAME K</div>
+  <nav>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <img src="dame-k-logo.jpg" alt="DAME K logo">
+      <h1>DAME K</h1>
+      <p>Révélez votre élégance</p>
+      <a class="button" href="#collection">Shop Collection</a>
+    </div>
+  </section>
+
+  <section id="collection">
+    <h2 class="section-title">THE COLLECTION</h2>
+    <div class="products">
+      <article class="card">
+        <div class="dress black">♢</div>
+        <div class="card-info">
+          <h3>La Noir</h3>
+          <div class="price">$120</div>
+          <a class="button" href="#contact">View Dress</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="dress white">◇</div>
+        <div class="card-info">
+          <h3>La Blanche</h3>
+          <div class="price">$135</div>
+          <a class="button" href="#contact">View Dress</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="dress black">✧</div>
+        <div class="card-info">
+          <h3>L'Élégante</h3>
+          <div class="price">$150</div>
+          <a class="button" href="#contact">View Dress</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">DAME K</h2>
+    <p>
+      DAME K is a modern dress label built around timeless black-and-white
+      elegance. Every piece is designed to feel refined, confident, and
+      unforgettable.
+    </p>
+  </section>
+
+  <section id="contact" style="text-align:center;">
+    <h2 class="section-title">CONTACT</h2>
+    <p style="font-family:Arial,sans-serif;margin-bottom:20px;">
+      Ready to discover your next look?
+    </p>
+    <a class="button" href="mailto:hello@damek.com">Contact DAME K</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 DAME K — RÉVÉLEZ VOTRE ÉLÉGANCE
+</footer>
+
+</body>
+</html>
